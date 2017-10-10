@@ -21,7 +21,7 @@ function addMovie( movie ){
 }
 
 
-var newMovie = {title:"Titanic”, year: “1997", length: 194 , rating: "7.7", genre: "Drama" };
+var newMovie = {title:"Titanic”, year: “1997", length: 194 , rating: "9.2", genre: "Drama" };
 console.log(addMovie(newMovie));
 
 function movieByRating(){
@@ -46,11 +46,16 @@ console.log(movieByRating());
 
 function findByTitle( title ){
   //add code
-    var list = [];
-   movieList.map(function(m,i){
-     if(m.title.toLowerCase().includes(title)) list.push(m);
+  var M_list = [];
+  movieList.map(function(movie){
+    if(movie.title.toLowerCase().includes(title)){
+
+
+    M_list.push(movie);
+  }
    });
-   return list;
-}
+   return M_list;
+  }
+
 
 console.log(findByTitle("matrix"));
